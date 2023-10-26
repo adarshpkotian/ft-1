@@ -1,0 +1,304 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+
+html {
+  background: linear-gradient(180deg, #fff 0%, #f0f1ff 100%);
+  font-size: 16px;
+  width: 100%;
+}
+body{
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #83869a;
+}
+
+button {
+  z-index: 10;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  border-radius: 1.75rem;
+  color: white;
+  border: 0px;
+}
+
+.header-button {
+  background: #13183f;
+}
+
+.header-button:hover{
+  background: #666CA3;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 2rem 10rem;
+}
+
+.space-between {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-section {
+  padding: 2rem 0rem;
+}
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 64rem;
+  padding: 11rem 35rem 14rem 0rem;
+}
+
+.hero-img-tablet{
+  display: none;
+  z-index: -10;
+}
+.hero-img-mobile{
+  display: none;
+  z-index: -10;
+}
+.hero-img-desktop {
+  position: absolute;
+  top:-10rem;
+  right: 0rem;
+  object-fit: cover;
+  height: 60rem;
+  width: 45rem;
+  object-position: 0% ;
+  z-index: -10;
+}
+
+.hero-h1 {
+  font-weight: 800;
+  font-size: 3.5rem;
+  
+}
+
+.hero-left > p {
+  padding: 1.8rem 0 2.5rem 0rem;
+ 
+}
+
+
+.hero-button {
+  z-index: 10;
+  background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+}
+
+.hero-button:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+}
+
+
+.courses-section {
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(2,50%);
+  grid-template-columns: repeat(3,1fr);
+  gap: 4rem 2rem;
+  padding-bottom: 5rem;
+}
+
+.card-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0px 25px 50px 0px rgba(6, 22, 141, 0.04);
+  padding: 3rem 2rem;
+}
+
+
+
+.card-4 > img {
+  position: absolute;
+  top: -2rem;
+}
+
+.popular {
+  justify-content: center;
+  line-height: 2.5rem;
+  font-weight: 800;
+  font-size: 2rem;
+  color: white;
+  background: linear-gradient(180deg, #ff6f48 0%, #f02aa6 100%);
+}
+.card-4 > span {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}
+
+.card-4 > p {
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.75rem;
+}
+
+.card-4 > a {
+  color: #f74780;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem;
+  text-decoration: none;
+}
+
+.card-4 > a:hover{
+  color: #FFA7C3;
+}
+
+.footer-section {
+  background: #13183F ;
+  padding: 4rem 10rem;
+  position: relative;
+}
+
+.footer-btn {
+  background: linear-gradient(180deg, #4851ff -54.32%, #f02aa6 100%);
+  position: absolute;
+  right: 10rem;
+}
+
+.footer-btn:hover{
+  background:  linear-gradient(0deg, rgba(255, 255, 255, 0.50) 0%, rgba(255, 255, 255, 0.50) 100%), linear-gradient(180deg, #4851FF -54.32%, #F02AA6 100%);
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1120px) {
+  .hero-img-desktop{
+    display: none;
+  }
+
+  .hero-img-tablet{
+    display: block;
+    object-fit: cover;
+    height: 50rem;
+    width: 27rem;
+    position: absolute;
+    object-position: 0% 100%;
+    top: -5rem;
+    right: 0rem;
+  }
+  .container{
+    padding: 1.5rem 2.5rem;
+  }
+  .hero-section{
+    padding-right: 20rem;
+  }
+  .hero-left{
+    max-width: 25rem;
+    padding: 5rem 0 10rem 0;
+  }
+  .hero-h1{
+  font-size: 2.5rem;
+  }
+  .card-4{
+    padding: 3.5rem 2rem;
+  }
+  .card-4 > p{
+    font-size: 1rem;
+  }
+  button{
+    font-size: 1rem;
+  }
+  .courses-section {
+    
+    grid-template-rows: repeat(3, 35%);
+    grid-template-columns: 1fr 1fr;
+    gap: 3.5rem 2rem;
+    padding: 5rem 0rem 15rem 0rem;
+
+  }
+  .footer-section{
+    padding: 1.75rem 2.5rem;
+    
+  }
+  .footer-btn {
+    right: 2.5rem;
+  }
+
+
+}  
+
+@media only screen and (max-width: 700px) {
+ html{
+  min-width: 100%;
+ }
+  .body{
+    min-width: 100%;
+  }
+  .container{
+    padding: 2rem 1rem;
+  }
+  .hero-img-tablet{
+    display: none;
+  }
+  .hero-img-mobile{
+    display: block;
+    object-fit: contain;
+  }
+  .hero-left{
+    max-width: 100%;
+  }
+  .hero-section{
+    flex-direction: column;
+    padding: 0;
+  }
+  .hero-left{
+    padding: 2rem 0;
+  }
+  .courses-section {
+    
+    grid-template-rows: 10rem repeat(5,20%);
+    grid-template-columns: 1fr;
+    gap: 4rem 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 32.5rem;
+  }
+  .popular {
+    font-size:1.75rem;
+  }
+
+  .card-4{
+    padding: 2.5rem 1.75rem 2rem 1.75rem;
+  }  
+  .card-4 > p {
+    font-size: 1rem;
+  }
+  .card-4 > span {
+    font-size: 1.25rem;
+  }
+  .card-4 > a {
+    font-size: 1.125rem;
+  }
+  .footer-section{
+    padding: 2.5rem 1rem;
+    
+  }
+  .footer-btn {
+    right: 1rem;
+  }
+}
